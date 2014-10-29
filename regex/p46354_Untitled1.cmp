@@ -1,11 +1,13 @@
-function newton_sqrt return decimal (input n as decimal):
-	define variable x as decimal.
-	define variable xn as decimal.
-	define variable iters as integer.
-	define variable i as integer.
+
+
+function newton_sqrt RETURNS DECIMAL (input n as DECIMAL):
+    define variable x as DECIMAL.
+    define variable xn as DECIMAL.
+    define variable iters as integer.
+    define variable i as integer.
 
 	do i = 0 to n:
-		define variable val as decimal.
+		define variable val as DECIMAL.
 		val = i * i - n.
 		if val = 0.0 then
 			return i.
@@ -25,12 +27,14 @@ function newton_sqrt return decimal (input n as decimal):
 	return xn.
 end function.
 
-DEF VAR i AS INTEGER.
-DEF VAR k AS INTEGER INIT 123456789.
+DEFINE VARIABLE i AS INTEGER.
+DEFINE VARIABLE k AS INTEGER INIT 123456789.
+
+DEF VAR t AS INTEGER.
 ETIME(YES).
-DO i = 0 TO 500:
+DO i = 0 TO 100000:
     newton_sqrt(k).
     k = k + 1.
-END.
+END.      
 MESSAGE ETIME
     VIEW-AS ALERT-BOX INFO BUTTONS OK.

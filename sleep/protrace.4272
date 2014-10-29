@@ -1,0 +1,60 @@
+=====================================================
+PROGRESS stack trace as of Thu Aug 28 16:46:30 2014
+=====================================================
+
+Progress OpenEdge Release 11.3 build 1333 SP02 on WINNT 
+
+Startup parameters:
+-pf D:\Progress\v11.3\dlc\startup.pf,-cpinternal ISO8859-1,-cpstream ISO8859-1,-cpcoll Basic,-cpcase Basic,-d mdy,-numsep 44,-numdec 46,(end .pf),-p _ab.p,-param E:\MyWorkspace\progress_with_c\sleep\sleep.p
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  5ACF5EFF 01:00304EFF D:\Progress\v11.3\dlc\bin\prow32.dll
+
+Registers:
+EAX:00000000
+EBX:5B158838
+ECX:02DE7AE8
+EDX:00DEF79C
+ESI:02DE7B88
+EDI:056153C8
+CS:EIP:0023:5ACF5EFF
+SS:ESP:002B:00DEF77C  EBP:02DE79E8
+DS:002B  ES:002B  FS:0053  GS:002B
+Flags:00010287
+
+
+Debugging dll: D:\Progress\v11.3\dlc\bin\DBGHELP.DLL
+Symbol Path:
+ D:\Progress\v11.3\dlc\bin;D:\Progress\v11.3\dlc\pdbfiles
+
+
+Call Stack:
+Address   Frame
+5ACF5EFF  00DEF79C  updateImmutableProperty+7CFFF
+
+
+** ABL Stack Trace **
+
+--> sprintf E:\MyWorkspace\progress_with_c\sleep\p53178_Untitled1.cmp at line 0  (E:\MyWorkspace\progress_with_c\sleep\p53178_Untitled1.cmp)
+    E:\MyWorkspace\progress_with_c\sleep\p53178_Untitled1.cmp at line 4  (E:\MyWorkspace\progress_with_c\sleep\p53178_Untitled1.cmp)
+    adecomm/_runcode.p at line 665  (adecomm/_runcode.r)
+    adecomm/_pwrun.p at line 938  (adecomm/_pwrun.r)
+    adecomm/_pwcomp.p at line 324  (adecomm/_pwcomp.r)
+    adeuib/_uibmain.p at line 5827  (adeuib/_uibmain.r)
+    _ab.p at line 394  (D:\Progress\v11.3\dlc\gui\_ab.r)
+
+** Persistent procedures/Classes **
+
+Handle  File Name
+001797  adeuib/_semain.r
+001796  adecomm/as-utils.r
+001130  adecomm/_winmenu.r
+001129  adeshar/_mlmgr.r
+001004  adeuib/_abfuncs.r
+
+** PROPATH **
+.,D:\Progress\v11.3\dlc\gui,D:\Progress\v11.3\dlc\gui\adecomm.pl,D:\Progress\v11.3\dlc\gui\adecomp.pl,D:\Progress\v11.3\dlc\gui\adedesk.pl,D:\Progress\v11.3\dlc\gui\adedict.pl,D:\Progress\v11.3\dlc\gui\adeedit.pl,D:\Progress\v11.3\dlc\gui\adeicon.pl,D:\Progress\v11.3\dlc\gui\aderes.pl,D:\Progress\v11.3\dlc\gui\adeshar.pl,D:\Progress\v11.3\dlc\gui\adetran.pl,D:\Progress\v11.3\dlc\gui\adeuib.pl,D:\Progress\v11.3\dlc\gui\adeweb.pl,D:\Progress\v11.3\dlc\gui\adexml.pl,D:\Progress\v11.3\dlc\gui\dataadmin.pl,D:\Progress\v11.3\dlc\gui\prodict.pl,D:\Progress\v11.3\dlc\gui\protools.pl,D:\Progress\v11.3\dlc,D:\Progress\v11.3\dlc\bin
+
+** Databases (logical/type/physical) **
+
+** End of Protrace **

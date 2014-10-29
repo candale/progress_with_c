@@ -15,3 +15,4 @@ PROCEDURE newton_sqrt EXTERNAL "E:\MyWorkspace\progress_with_c\math\sqrt.dll" CD
     DEFINE RETURN PARAMETER res AS DOUBLE.
 END.       
 
+C:\Windows\System32\msvcrt.dll
